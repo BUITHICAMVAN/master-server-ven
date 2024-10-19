@@ -6,7 +6,8 @@ import { updateGamePlayers } from "../../../../lib/gameHelper"; // Import the he
 interface Player {
   wallet: string;
   email: string;
-  goldDust: number;
+  goldDust: number;       // Current balance of Gold Dust
+  goldDustChange: number; // Change to apply (positive or negative)
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
